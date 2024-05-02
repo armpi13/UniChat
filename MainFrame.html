@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<body style="background-color:#33475b">
+<title>PADA Chat</title>
+<style>
+  .choise-panel {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Κεντράρει το panel οριζόντια */
+    max-width: 400px;
+  }
+
+  /* Στυλ για τους τίτλους των φίλτρων */
+  .choise-title {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+  }
+
+  /* Πλέγμα (grid) για διάταξη */
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Κεντράρει τα περιεχόμενα οριζόντια */
+  }
+
+  .choise-select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Εξασφαλίζει ότι το padding δεν προστίθεται στο πλάτος του πεδίου */
+  }
+
+  /* Στυλ για το κουμπί εφαρμογής φίλτρου */
+  .choise-panel button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+</style>
+</head>
+<body style="background-color: #f2f2f2;">
+<h2 class="center-text" style="font-size: 36px; margin-top: 10px; text-align: center;">Καλώς ήρθατε στην εφαρμογή συνομιλίας ΠΑΔΑ!</h2>
+<div class="grid-container">
+  <div class="choise-panel">
+    <h3 class="choise-title">Επέλεξε μάθημα:</h3>
+    <select class="choise-select">
+      <option value="MAE">Μεθοδολογίες Ανάπτυξης Εφαρμογών</option>
+      <option value="Hlektronikh">Ηλεκτρονική</option>
+    </select>
+    <button onclick="clearPage()">Επιλογή μαθήματος</button>
+  </div>
+</div>
+<script>
+function clearPage() {
+  document.body.innerHTML = '';
+  
+   
+}
+</script>
+</body>
+</html>
