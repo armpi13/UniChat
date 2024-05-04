@@ -63,12 +63,13 @@
 </style>
 </head>
 <body style="background-color: #33475b;">
-<h2 class="center-text" style="font-size: 36px; margin-top: 10px; text-align: center;">Καλώς ήρθατε στην εφαρμογή συνομιλίας ΠΑΔΑ!</h2>
+<h2 class="center-text"style="font-size: 36px; color:#ddd;4CAF50 margin-top: 10px; text-align: center;">Καλώς ήρθατε στην εφαρμογή συνομιλίας ΠΑΔΑ!</h2>
 <div class="grid-container">
   <div class="choise-panel">
     <h3 class="choise-title">Επέλεξε μάθημα:</h3>
     <select class="choise-select">
       <option value="MAE">Μεθοδολογίες Ανάπτυξης Εφαρμογών</option>
+      
      
     </select>
     <button onclick="clearPage()">Επιλογή μαθήματος</button>
@@ -80,14 +81,17 @@
     <div id="chatMessages">
       <!-- Εδώ θα προστεθούν τα μηνύματα της συνομιλίας με JavaScript -->
     </div>
-    <input type="text" id="messageInput" size="1" placeholder="Πληκτρολογήστε το μήνυμά σας">
+    <input type="text" id="messageInput" size="40" placeholder="Πληκτρολογήστε το μήνυμά σας">
     <button onclick="sendMessage()">Αποστολή</button>
   </div>
 </div>
 
 <script>
 function clearPage() {
-  document.body.innerHTML = '';
+  var ChoosenLesson = document.getElementsByClassName("choise-select")[0].value;
+
+        alert("Επιλέχθηκε το μάθημα:" + ChoosenLesson);
+
 }
 </script>
 </body>
